@@ -43,4 +43,5 @@ interface NFTCollection {
     balance: number;
     floor_value_eth: number;
     floor_value_busd: string;
+    image_url: string;
 }

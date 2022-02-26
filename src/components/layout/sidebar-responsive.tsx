@@ -95,10 +95,15 @@ const SidebarResponsive: FC<SidebarResponsiveProps> = ({
                             </ul>
                         </nav>
                     </div>
-                    <div>
-                        <button className="uppercase font-bold bg-shumo-red text-gray-50 w-full rounded-lg py-3 px-10">
+                    <div className="w-full">
+                        <a
+                            href="https://app.uniswap.org/#/swap?outputCurrency=0xeaa2c985abf14ac850f6614faebd6e4436bea65f&chain=mainnet&inputCurrency=ETH"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="uppercase font-bold bg-shumo-red text-gray-50 w-full rounded-lg py-3 inline-block text-center"
+                        >
                             Buy Shumo
-                        </button>
+                        </a>
                     </div>
                 </motion.aside>
             )}

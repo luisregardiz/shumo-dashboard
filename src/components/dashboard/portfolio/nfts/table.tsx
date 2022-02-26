@@ -21,6 +21,7 @@ const NFTTable: FC<NFTTableProps> = ({ nftsCollections }) => {
             <table className="min-w-full my-5">
                 <thead className="uppercase font-bold text-shumo-red lg:text-base text-sm">
                     <tr>
+                        <th></th>
                         <th>Collection</th>
                         <th>Balance</th>
                         <th>Floor Value (ETH)</th>
@@ -30,6 +31,13 @@ const NFTTable: FC<NFTTableProps> = ({ nftsCollections }) => {
                 <tbody className="text-center divide-y divide-shumo-soft-brown">
                     {nftsCollections.map((collection) => (
                         <tr key={collection.name}>
+                            <td>
+                                <img
+                                    src={collection.image_url}
+                                    alt={collection.name}
+                                    className="h-12 w-12 rounded-full shadow-lg "
+                                />
+                            </td>
                             <td className="py-5">{collection.name}</td>
                             <td className="py-5">{collection.balance}</td>
                             <td className="py-5">
