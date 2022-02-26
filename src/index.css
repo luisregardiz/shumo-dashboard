@@ -19,6 +19,7 @@ body {
 .light {
   background-color: #FFECE8;
   color: #784421;
+  transition: all ease-in-out 0.25s;
 
   
 }
@@ -26,6 +27,7 @@ body {
 .dark {
   background-color: #1C1917;
   color: #FFF3E9;
+  transition: all ease-in-out 0.25s;
 
 }
 

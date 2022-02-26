@@ -48,7 +48,7 @@ const StatsList: FC<StatsListProps> = ({ tokenStats, socialMediaStats }) => {
                 statsInfo={tokenStats.liquidity}
                 icon={<FaCoins className="text-2xl text-shumo-red mr-1" />}
                 formatted={true}
-                token={true}
+                dollar={true}
             />
             <Card
                 title="Fund"

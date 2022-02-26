@@ -10,40 +10,36 @@ type NavItems = {
     icon?: React.ReactElement;
     subItems?: NavItems[];
 };
+
+export const navItems: NavItems[] = [
+    {
+        name: "Stats",
+        path: "/stats",
+        icon: <HiViewGrid className="text-shumo-red text-2xl" />,
+    },
+    {
+        name: "Portfolio",
+        path: "/portfolio",
+        icon: <HiBriefcase className="text-shumo-red text-2xl" />,
+        subItems: [
+            {
+                name: "Tokens",
+                path: "/portfolio/tokens",
+                icon: <GoPrimitiveDot className="text-shumo-red text-2xl" />,
+            },
+            {
+                name: "NFTS",
+                path: "/portfolio/nfts",
+                icon: <GoPrimitiveDot className="text-shumo-red text-2xl" />,
+            },
+        ],
+    },
+];
 const Sidebar: FC<SidebarProps> = () => {
     const location = useLocation();
 
-    const navItems: NavItems[] = [
-        {
-            name: "Stats",
-            path: "/stats",
-            icon: <HiViewGrid className="text-shumo-red text-2xl" />,
-        },
-        {
-            name: "Portfolio",
-            path: "/portfolio",
-            icon: <HiBriefcase className="text-shumo-red text-2xl" />,
-            subItems: [
-                {
-                    name: "Tokens",
-                    path: "/portfolio/tokens",
-                    icon: (
-                        <GoPrimitiveDot className="text-shumo-red text-2xl" />
-                    ),
-                },
-                {
-                    name: "NFTS",
-                    path: "/portfolio/nfts",
-                    icon: (
-                        <GoPrimitiveDot className="text-shumo-red text-2xl" />
-                    ),
-                },
-            ],
-        },
-    ];
-
     return (
-        <aside className="bg-gray-50 dark:bg-stone-800 min-h-screen p-10 lg:flex hidden flex-col justify-between  shadow-xl ">
+        <aside className="bg-gray-50 dark:bg-stone-800 min-h-screen p-10 lg:flex hidden flex-col justify-between  shadow-xl">
             <div className="flex flex-col">
                 <div className="self-center">
                     <img src={ShumoLogo} alt="Shumo Logo" />
